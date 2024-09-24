@@ -4,31 +4,36 @@ import 'package:flutter/material.dart';
 
 /// Allows you to define the canvas behaviour on any gesture registered by the [Canvas].
 mixin CanvasPolicy on BasePolicySet {
-  void onCanvasTap() {}
+  void onCanvasTap(BuildContext context) {}
 
-  void onCanvasTapDown(TapDownDetails details) {}
+  void onCanvasTapDown(BuildContext context, TapDownDetails details) {}
 
-  void onCanvasTapUp(TapUpDetails details) {}
+  void onCanvasTapUp(BuildContext context, TapUpDetails details) {}
 
-  void onCanvasTapCancel() {}
+  void onCanvasTapCancel(BuildContext context) {}
 
-  void onCanvasLongPress() {}
+  void onCanvasLongPress(BuildContext context) {}
 
-  void onCanvasScaleStart(ScaleStartDetails details) {}
+  void onCanvasScaleStart(BuildContext context, ScaleStartDetails details) {}
 
-  void onCanvasScaleUpdate(ScaleUpdateDetails details) {}
+  void onCanvasScaleUpdate(BuildContext context, ScaleUpdateDetails details) {}
 
-  void onCanvasScaleEnd(ScaleEndDetails details) {}
+  void onCanvasScaleEnd(BuildContext context, ScaleEndDetails details) {}
 
-  void onCanvasLongPressStart(LongPressStartDetails details) {}
+  void onCanvasLongPressStart(
+      BuildContext context, LongPressStartDetails details) {}
 
-  void onCanvasLongPressMoveUpdate(LongPressMoveUpdateDetails details) {}
+  void onCanvasLongPressMoveUpdate(
+      BuildContext context, LongPressMoveUpdateDetails details) {}
 
-  void onCanvasLongPressEnd(LongPressEndDetails details) {}
+  void onCanvasLongPressEnd(
+      BuildContext context, LongPressEndDetails details) {}
 
-  void onCanvasLongPressUp() {}
+  void onCanvasLongPressUp(
+    BuildContext context,
+  ) {}
 
-  void onCanvasPointerSignal(PointerSignalEvent event) {}
+  void onCanvasPointerSignal(BuildContext context, PointerSignalEvent event) {}
 
   bool get showLinksOnTopOfComponents => true;
 }
