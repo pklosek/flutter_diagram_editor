@@ -1,34 +1,41 @@
 import 'package:diagram_editor/src/abstraction_layer/policy/base_policy_set.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 
 /// Allows you to define the component behaviour on any gesture registered by the [Component].
 mixin ComponentPolicy on BasePolicySet {
-  void onComponentTap(String componentId) {}
+  void onComponentTap(BuildContext context, String componentId) {}
 
-  void onComponentTapDown(String componentId, TapDownDetails details) {}
+  void onComponentTapDown(
+      BuildContext context, String componentId, TapDownDetails details) {}
 
-  void onComponentTapUp(String componentId, TapUpDetails details) {}
+  void onComponentTapUp(
+      BuildContext context, String componentId, TapUpDetails details) {}
 
-  void onComponentTapCancel(String componentId) {}
+  void onComponentTapCancel(BuildContext context, String componentId) {}
 
-  void onComponentScaleStart(String componentId, ScaleStartDetails details) {}
+  void onComponentScaleStart(
+      BuildContext context, String componentId, ScaleStartDetails details) {}
 
-  void onComponentScaleUpdate(String componentId, ScaleUpdateDetails details) {}
+  void onComponentScaleUpdate(
+      BuildContext context, String componentId, ScaleUpdateDetails details) {}
 
-  void onComponentScaleEnd(String componentId, ScaleEndDetails details) {}
+  void onComponentScaleEnd(
+      BuildContext context, String componentId, ScaleEndDetails details) {}
 
-  void onComponentLongPress(String componentId) {}
+  void onComponentLongPress(BuildContext context, String componentId) {}
 
-  void onComponentLongPressStart(
-      String componentId, LongPressStartDetails details) {}
+  void onComponentLongPressStart(BuildContext context, String componentId,
+      LongPressStartDetails details) {}
 
-  void onComponentLongPressMoveUpdate(
-      String componentId, LongPressMoveUpdateDetails details) {}
+  void onComponentLongPressMoveUpdate(BuildContext context, String componentId,
+      LongPressMoveUpdateDetails details) {}
 
   void onComponentLongPressEnd(
-      String componentId, LongPressEndDetails details) {}
+      BuildContext context, String componentId, LongPressEndDetails details) {}
 
-  void onComponentLongPressUp(String componentId) {}
+  void onComponentLongPressUp(BuildContext context, String componentId) {}
 
-  void onComponentPointerSignal(String componentId, PointerSignalEvent event) {}
+  void onComponentPointerSignal(
+      BuildContext context, String componentId, PointerSignalEvent event) {}
 }
